@@ -11,7 +11,6 @@ function App() {
   const [addInv, setAddInv] = useState(0)
   const [compInv, setCompInv] = useState(0)
   const [countOutInv, setCountOutInv] = useState(0)
-  const [gross, setGross] = useState(0)
   const [isDisabled, setIsDisabled] = useState(false);
 
   
