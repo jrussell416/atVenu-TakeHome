@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# atVenu take home assessment - product inventory
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+- Set beginnng inventory count
+- Add more inventory to count
+- Track comped inventory
+- Track end inventory count
+- Calculate gross sales
+- Display quantity remaining
+- Add a poster description and display on mouse over of the poster
 
-In the project directory, you can run:
+## Lessons Learned/Challenges
 
-### `yarn start`
+What did you learn while building this project?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Learned a bit more about React Hooks
+Leaned how to use React Bootstrap
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+What challenges did you face and how did you overcome them?
 
-### `yarn test`
+Using hooks was the biggest challenge. I used video tutorials and StackOverflow to help problem solve
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The input fields aren't all displaying the information needed. The total inventory field does not include the previous value when calculating the new total. So if a user had an initial count of 10, then added 3 the form will add to 13 but if a user added 1 more then count would then say 11 and not 14. I would need to figure out how to use a previous count to ensure accurate count
 
-### `yarn build`
+Using React Bootstrap was also a challenge. Again I used video tutorials as well as the official documentation to use the components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For the poster text I struggled with displaying the text. The text should display on hover after the textdescription state has been updated (after clicking the "submit" button in the popup menu) but the text currently displays on mouseover without needing to push the submit button
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+While the popup menu can receive the updated price I was unable to get the poster price to updated. The price is dynamically updated via a prop and I was unable to figure out how to update the price value in the parent component via a change in a child component
